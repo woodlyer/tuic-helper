@@ -10,7 +10,10 @@ This repository help you to run tuic.
 # quick tutorial
 
 1.generate cert and key
-use ssl.sh to generate ssl certifacate.  
+Use ssl.sh to generate ssl certifacate.  
+You don't need a real domain name.  
+Just generate one.  
+
 ```
 chmod +x ssl.sh
 ./ssl.sh abc.com
@@ -101,7 +104,7 @@ tuic > hysteria > kcptun
 
 
 # Reference
-config.json from https://github.com/chika0801/tuic-install
+config.json from https://github.com/chika0801/tuic-install  
 ssl.sh from https://devopscube.com/create-self-signed-certificates-openssl/
 
 
