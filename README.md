@@ -10,15 +10,16 @@ This repository help you to run tuic.
 # quick tutorial
 
 1.generate cert and key
-ssl.sh from https://devopscube.com/create-self-signed-certificates-openssl/
+use ssl.sh to generate ssl certifacate.  
 ```
 chmod +x ssl.sh
 ./ssl.sh abc.com
 ```
 The script will create all the certificates and keys we created using the commands.  
 The SSL certificate and private keys get named with the domain name you pass as the script argument.  
-abc.com.key  is private key file.  
-abc.com.crt  is cert file.  
+"abc.com.crt"  is cert file.  
+"abc.com.key"  is private key file.  
+
 
 
 2.edit the config_server.json
@@ -68,22 +69,13 @@ abc.com.crt  is cert file.
 .\tuic-client.exe  -c config_client.json 
 ```
 
-
-
-# about tuic
-Tuic is based on quic protocol.
-Now it only support proxy mode.
-It's developed with Rust.  
-
-The speed of tuic is faster than hysteria and kcptun:  
-tuic > hysteria > kcptun  
+# Windows GUI 
+These terminal in windows will show a black window on the desktop.  
+If you want to run the program in the background, please use gostGUI.  
 
 
 
-config.json from https://github.com/chika0801/tuic-install
-
-
-# run tuic in the background.
+# Run tuic in the background in Linux
 run this command to create run.sh and run tuic-server in the background.
 ```
 cat > run.sh << END
@@ -95,6 +87,23 @@ END
 chmod +x run.sh
 ./run.sh
 ```
+
+
+# About tuic
+Tuic is based on quic protocol.
+Now it only support proxy mode.
+It's developed with Rust.  
+
+The speed of tuic is faster than hysteria and kcptun:  
+tuic > hysteria > kcptun  
+
+
+
+# Reference
+config.json from https://github.com/chika0801/tuic-install
+ssl.sh from https://devopscube.com/create-self-signed-certificates-openssl/
+
+
 
 
 
