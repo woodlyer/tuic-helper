@@ -4,7 +4,7 @@ help you to run tuic.  based on https://github.com/EAimTY/tuic
 
 
 tuic is a good proxy tool. location: https://github.com/EAimTY/tuic  
-Doc at https://www.eaimty.com/2022/03/tuic.html . but not very enough.
+Doc at https://www.eaimty.com/2022/03/tuic.html . but not very enough.  
 This repository help you to run tuic.  
 
 # quick tutorial
@@ -72,6 +72,7 @@ The SSL certificate and private keys get named with the domain name you pass as 
 # Windows GUI 
 These terminal in windows will show a black window on the desktop.  
 If you want to run the program in the background, please use gostGUI.  
+https://github.com/woodlyer/gostGUI  
 
 
 
