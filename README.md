@@ -14,18 +14,8 @@ wget https://github.com/EAimTY/tuic/releases/download/0.8.5/tuic-client-0.8.5-x8
 
 # quick tutorial
 
-1.generate cert and key
-Use ssl.sh to generate ssl certifacate.  
-You don't need a real domain name.  
-Just generate one.  
-```
-chmod +x ssl.sh
-./ssl.sh abc.com
-```
-The script will create all the certificates and keys we created using the commands.  
-The SSL certificate and private keys get named with the domain name you pass as the script argument.  
-"abc.com.crt"  is cert file.  
-"abc.com.key"  is private key file.  
+1. request zerossl.com to generate cert and key
+tuic doesn't support selfsigned cert.  
 
 
 
@@ -34,8 +24,8 @@ The SSL certificate and private keys get named with the domain name you pass as 
 {
     "port": 16000,
     "token": ["chika"],
-    "certificate": "/root/abc.com.crt",
-    "private_key": "/root/abc.com.key",
+    "certificate": "./cert/abc.com.crt",
+    "private_key": "./cert/abc.com.key",
     "ip": "::",
     "congestion_controller": "bbr",
     "alpn": ["h3"],
@@ -57,7 +47,7 @@ The SSL certificate and private keys get named with the domain name you pass as 
         "server": "abc.com",
         "port": 16000,
         "token": "chika",
-        "ip": "10.0.0.1",
+        "ip": "10.0.0.1",// if you want to use domain ,keep this blank.
         "congestion_controller": "bbr",
         "alpn": ["h3"],
         "reduce_rtt": true,
@@ -78,8 +68,9 @@ The SSL certificate and private keys get named with the domain name you pass as 
 
 # Windows GUI 
 These terminal in windows will show a black window on the desktop.  
-If you want to run the program in the background, please use gostGUI.  
-https://github.com/woodlyer/gostGUI  
+If you want to run the program in the background, please use [gostGUI](https://github.com/woodlyer/gostGUI).  
+It's contained In this project.
+
 
 
 
