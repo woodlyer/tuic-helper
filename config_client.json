@@ -1,7 +1,7 @@
 {
     "relay": {
-        "server": "chika.example.com",
-        "port": 16386,
+        "server": "abc.com",
+        "port": 16000,
         "token": "chika",
         "ip": "10.0.0.1",
         "congestion_controller": "bbr",
@@ -12,5 +12,5 @@
     "local": {
         "port": 50001
     },
-    "log_level": "off"
+    "log_level": "info"
 }
