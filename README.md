@@ -1,11 +1,7 @@
 # tuic-helper
-help you to run tuic.  based on https://github.com/EAimTY/tuic
-
-
-
 tuic is a good proxy tool. location: https://github.com/EAimTY/tuic  
-Doc at https://www.eaimty.com/2022/03/tuic.html . but not very enough.  
-This repository help you to run tuic.  
+Doc locate at https://www.eaimty.com/2022/03/tuic.html , but it's not very clear.  
+This repository helps you to run tuic.  
 
 # quick tutorial
 
@@ -13,7 +9,6 @@ This repository help you to run tuic.
 Use ssl.sh to generate ssl certifacate.  
 You don't need a real domain name.  
 Just generate one.  
-
 ```
 chmod +x ssl.sh
 ./ssl.sh abc.com
