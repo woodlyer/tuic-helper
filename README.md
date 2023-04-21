@@ -3,6 +3,15 @@ tuic is a good proxy tool. location: https://github.com/EAimTY/tuic
 Doc locate at https://www.eaimty.com/2022/03/tuic.html , but it's not very clear.  
 This repository helps you to run tuic.  
 
+# download tuic  
+Now the version is 0.8.5.
+```
+wget https://github.com/EAimTY/tuic/releases/download/0.8.5/tuic-server-0.8.5-x86_64-linux-gnu
+wget https://github.com/EAimTY/tuic/releases/download/0.8.5/tuic-client-0.8.5-x86_64-linux-gnu
+wget https://github.com/EAimTY/tuic/releases/download/0.8.5/tuic-client-0.8.5-x86_64-windows-gnu.exe
+```
+
+
 # quick tutorial
 
 1.generate cert and key
