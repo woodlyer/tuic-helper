@@ -14,10 +14,20 @@ wget https://github.com/EAimTY/tuic/releases/download/0.8.5/tuic-client-0.8.5-x8
 
 # quick tutorial
 
-1. request zerossl.com to generate cert and key
-tuic doesn't support selfsigned cert.  
+1. request [zerossl.com](https://zerossl.com/) or [letsencrypt.com](https://letsencrypt.org/) to generate cert and key
 
+If you don't want to request a cert, just generate one, by yourself.  
+In the cert dir, run ssl.sh to gnerate a cert and key.  
+```
+ssl.sh  abc.com
+```
+It will produce serval file:
+```
+abc.com.crt  certificate
+abc.com.key  private key
 
+rootCA.crt   ca cert
+```
 
 2.edit the config_server.json
 ```
@@ -39,19 +49,20 @@ tuic doesn't support selfsigned cert.
 ./tuic-server -c config_server.json
 ```
 
-4.edit the config_client.json
-
+4.edit the config_client.json  
+Iif you want to use domain ,keep the ip blank. 
 ```
 {
     "relay": {
         "server": "abc.com",
         "port": 16000,
         "token": "chika",
-        "ip": "10.0.0.1",// if you want to use domain ,keep this blank.
+        "ip": "10.0.0.1",
         "congestion_controller": "bbr",
         "alpn": ["h3"],
         "reduce_rtt": true,
-        "max_udp_relay_packet_size": 1146
+        "max_udp_relay_packet_size": 1146,
+        "certificates": ["cert/rootCA.crt"]
     },
     "local": {
         "port": 1080
