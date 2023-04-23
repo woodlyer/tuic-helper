@@ -19,14 +19,15 @@ wget https://github.com/EAimTY/tuic/releases/download/0.8.5/tuic-client-0.8.5-x8
 If you don't want to request a cert, just generate one, by yourself.  
 In the cert dir, run ssl.sh to gnerate a cert and key.  
 ```
-ssl.sh  abc.com
+./ssl.sh  abc.com
 ```
-It will produce serval file:
-```
-abc.com.crt  certificate
-abc.com.key  private key
+It will produce serval files:
+```bash
+abc.com.crt  #certificate
+abc.com.key  #private key
 
-rootCA.crt   ca cert
+rootCA.crt   #ca cert
+rootCA.key   #ca key 
 ```
 
 2.edit the config_server.json
@@ -74,7 +75,11 @@ Iif you want to use domain ,keep the ip blank.
 
 5.run tuic-client
 ```
-.\tuic-client.exe  -c config_client.json 
+# linux
+.\tuic-client -c config_client.json  
+
+# windows
+.\tuic-client.exe  -c config_client.json  
 ```
 
 # Windows GUI 
@@ -86,22 +91,15 @@ It's contained In this project.
 
 
 # Run tuic in the background in Linux
-run this command to create run.sh and run tuic-server in the background.
+use nohup to run tuic-server in the background.
 ```
-cat > run.sh << END
-
-#!/bin/bash
 nohup ./tuic-server -c config.json  > logtuic.log  2>&1 &
-END
-
-chmod +x run.sh
-./run.sh
 ```
 
 
 # About tuic
 Tuic is based on quic protocol.
-Now it only support proxy mode.
+Now it only support proxy mode, doesn't support tunnel mode.
 It's developed with Rust.  
 
 The speed of tuic is faster than hysteria and kcptun:  
