@@ -1,8 +1,8 @@
 {
     "port": 16000,
     "token": ["chika"],
-    "certificate": "./abc.com.crt",
-    "private_key": "./abc.com.key",
+    "certificate": "./cert/abc.com.crt",
+    "private_key": "./cert/abc.com.key",
     "ip": "::",
     "congestion_controller": "bbr",
     "alpn": ["h3"],
