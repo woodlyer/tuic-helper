@@ -7,10 +7,11 @@
         "congestion_controller": "bbr",
         "alpn": ["h3"],
         "reduce_rtt": true,
-        "max_udp_relay_packet_size": 1146
+        "max_udp_relay_packet_size": 1146,
+        "certificates": ["cert/rootCA.crt"]
     },
     "local": {
-        "port": 50001
+        "port": 1080
     },
     "log_level": "info"
 }
